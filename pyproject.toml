@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arsenic"
+version = "0.1.0"
+description = "MAD RAG poison kit"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["click>=8.0", "rich>=13.0", "fpdf2>=2.7"]
+
+[project.scripts]
+arsenic = "arsenic_app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
